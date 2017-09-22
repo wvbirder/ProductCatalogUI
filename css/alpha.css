@@ -1,0 +1,331 @@
+/* This is the CSS for the Node.js Application. 
+*  Post date 11/11/2015
+*/
+html { 
+  background: url(../Images/bg.jpg) no-repeat center center fixed; 
+  background-color:#AABCC2;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color:  #fffff;
+    margin:0px;
+    overflow-x: hidden;
+    height: 100%;
+ }
+ 
+button {
+    height: 25px;
+    border-radius: 2px;
+    -webkit-radius: 2px;
+    cursor: pointer;
+} 
+
+a {
+color: #55acee;
+
+
+}
+
+#title{
+position:fixed;
+top:0px;
+width:100%;
+padding:5px 30px;
+background-color:rgba(71,88,94,.8);
+color:#FFFFFF;
+}
+
+.logoDiv {
+display:block;
+width: 1px;
+background-color: #ffffff;
+    border-radius: 10px;
+    -webkit-radius: 10px;   
+
+}
+
+#allTable{
+margin-left: auto;
+margin-right: auto;
+margin-top:130px;
+}
+
+.productTd {
+padding: 30px;
+}
+
+.popupTable {
+width: 1px;
+height: 1px;
+font-size: 1pt;
+line-height: 0px;
+border: 1px solid #000;
+background-color: #DFE5E7;
+color:#47585E;
+    border-radius: 10px;
+    -webkit-radius: 10px;    
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 10px 10px 5px rgba(0,0,0,0.4);
+    cursor: pointer;  
+}
+
+.popupTable tr {
+line-height: 0px;
+height: 1px;
+padding: 0px;
+}
+
+.popupTable td {
+border: 0px;
+height: 1px;
+width: 1px;
+cellspacing: 0px;
+cellpadding: 0px;
+padding: 0px;
+}
+
+.productContentTd {
+font-size:10pt;
+font-weight: bold;
+line-height: 20px;
+text-align: top;
+padding-top: 0px;
+}
+
+.popupProductC3R1Spacer {
+    height: 14px;
+    width: 9px;
+    visibility: hidden;
+}
+
+.popupProductC4R1Spacer {
+    height: 14px;
+    width: 0px;
+    visibility: hidden;    
+}
+
+.popupProductC1R2Spacer {
+    height: 200px;
+    width: 11px;
+    visibility: hidden;    
+}
+.popupProductC1R3Spacer {
+    height: 0px;
+    width: 11px;
+    visibility: hidden;    
+}
+.popupProductC1R4Spacer {
+    height: 10px;
+    width: 11px;
+    visibility: hidden;    
+}
+
+
+#popupTwitterContentDiv {
+
+width: 100%;
+background-color: #fefefe;
+border-left: 1px solid #000000;
+/*margin-right: 10px;*/
+overflow: auto;
+
+line-height: 20px;
+font-size: 12pt;
+
+}
+
+.popupControlDiv {
+    border-top: 1px solid #000000;
+    text-align: center;
+    line-height: 20px;    
+    font-size: 10pt;
+}    
+
+.productImage {
+height: 200px;
+width:200px;
+background-color:#6DBACF;
+}
+
+.productNameDiv {
+height: 110px;
+vertical-align:top;
+}
+
+
+
+
+
+.twitterTable {
+    font-size: 10pt;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+.twitterTable tr {
+    line-height: 20px;
+
+}
+
+.twitterTable td {
+    border: 1px solid #aaaaaa;
+    vertical-align: top;
+    padding-left: 3px;
+}
+
+.twitterScreenName {
+    width: 155px;
+    height: 1px;
+    visibility: hidden;
+    margin: 0px;    
+}
+
+.twitterTweetText {
+    width: 370px;
+    height: 1px;
+    visibility: hidden;
+    margin: 0px;        
+}
+
+
+
+.twitterTweetDate {
+    width: 110px;
+    height: 1px;
+    visibility: hidden;
+    margin: 0px;
+}
+
+.tweetHeader {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #eeeeee;
+    border-top: 0px;
+    padding: 0px;
+}
+
+
+.tweetTable {
+margin-left:auto;margin-right:auto;width:500px;border:1px solid #999999;border-radius: 4px;
+background-color:#ffffff; margin-top: 5px;
+
+
+}
+
+.tweetTable tr {
+line-height: 20px;
+
+}
+
+.tweetTable img {
+height: 15px;
+}
+
+.littleLogo {
+width: 40px;
+}
+
+.tweetFollowButton {
+    width: 65px;
+    border: 1px solid #55acee;
+    border-radius: 8px;  
+    padding: 2px 0px 2px 0px;
+    font-size: 8pt;
+    font-weight: bold;
+    color: #55acee;
+    margin: 0px 1px 0px 1px;
+    cursor: help;
+}
+
+
+/* BEGINNING OF IE SPECIFIC RANGE (SLIDER) CSS */
+input[type=range]::-ms-track {
+    height: 5px;    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+    /*remove default tick marks*/
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #aaaaaa;
+    border-radius: 10px;
+}
+
+
+
+
+input[type=range]::-ms-thumb {
+    border: 1px solid #999999;
+    height: 14px;
+    width: 8px;
+    border-radius: 20%;
+    background: #eeeeee;
+}
+
+input[type=range]:hover::-ms-thumb {
+    background: #b3d9ff;
+}
+
+::-ms-tooltip { display: none; }
+
+
+input[type=range]::-moz-range-track {
+  background: #888888;
+  height: 4px;
+  border-radius: 2px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: #888888;
+  height: 4px;
+  border-radius: 2px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -8px;
+}    
+
+/* END OF IE SPECIFIC RANGE (SLIDER) CSS */
+
+#sortChoice {
+/*    background: #555555;*/
+    width: 150px;
+    margin: 7px 1px 7px 1px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fillerDiv {
+    display: none;
+}
+    
+
