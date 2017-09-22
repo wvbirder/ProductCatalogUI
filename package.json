@@ -1,0 +1,14 @@
+{
+  "name": "AlphaOfficeProductCatalogUI",
+  "version": "0.0.1",
+  "dependencies": {
+    "http-server": ???"
+  },
+   "scripts": {
+        "prepublish": "zip -r target/productCatalog.zip manifest.json js alpha.html css images node_modules"
+    },
+  "main": "????? alpha.js",
+  "engines": {
+    "node": ">=6"
+  }
+}
