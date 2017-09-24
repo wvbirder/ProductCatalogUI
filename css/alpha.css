@@ -1,6 +1,5 @@
-/* This is the CSS for the Node.js Application. 
-*  Post date 11/11/2015
-*/
+/* This is the CSS for the alpha.html page. */
+
 html { 
   background: url(../Images/bg.jpg) no-repeat center center fixed; 
   background-color:#AABCC2;
@@ -10,9 +9,8 @@ html {
   background-size: cover;
 }
 
-
 body {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     color:  #fffff;
     margin:0px;
@@ -28,47 +26,36 @@ button {
 } 
 
 a {
-color: #55acee;
-
-
+    color: #3399ff;
 }
 
 #title{
-position:fixed;
-top:0px;
-width:100%;
-padding:5px 30px;
-background-color:rgba(71,88,94,.8);
-color:#FFFFFF;
-}
-
-.logoDiv {
-display:block;
-width: 1px;
-background-color: #ffffff;
-    border-radius: 10px;
-    -webkit-radius: 10px;   
-
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 5px 30px 5px 30px;
+    background-color: rgba(71,88,94,.8);
+    color: #ffffff;
 }
 
 #allTable{
-margin-left: auto;
-margin-right: auto;
-margin-top:130px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 130px;
 }
 
 .productTd {
-padding: 30px;
+    padding: 30px;
 }
 
+/* Popup table and also product pannels on the main page */
 .popupTable {
-width: 1px;
-height: 1px;
-font-size: 1pt;
-line-height: 0px;
-border: 1px solid #000;
-background-color: #DFE5E7;
-color:#47585E;
+    width: 1px;
+    height: 1px;
+    font-size: 1pt;
+    border: 1px solid #000;
+    background-color: #dfe5e7;
+    color: #47585E;
     border-radius: 10px;
     -webkit-radius: 10px;    
     box-shadow: 10px 10px 5px rgba(0,0,0,0.4);
@@ -77,26 +64,26 @@ color:#47585E;
 }
 
 .popupTable tr {
-line-height: 0px;
-height: 1px;
-padding: 0px;
+    line-height: 0px;
+    height: 1px;
+    padding: 0px;
 }
 
 .popupTable td {
-border: 0px;
-height: 1px;
-width: 1px;
-cellspacing: 0px;
-cellpadding: 0px;
-padding: 0px;
+    border: 0px;
+    height: 1px;
+    width: 1px;
+    cellspacing: 0px;
+    cellpadding: 0px;
+    padding: 0px;
 }
 
-.productContentTd {
-font-size:10pt;
-font-weight: bold;
-line-height: 20px;
-text-align: top;
-padding-top: 0px;
+.productContentDiv {
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: top;
+    padding-top: 0px;
 }
 
 .popupProductC3R1Spacer {
@@ -116,138 +103,207 @@ padding-top: 0px;
     width: 11px;
     visibility: hidden;    
 }
+
 .popupProductC1R3Spacer {
     height: 0px;
     width: 11px;
     visibility: hidden;    
 }
+
 .popupProductC1R4Spacer {
     height: 10px;
     width: 11px;
     visibility: hidden;    
 }
 
-
-#popupTwitterContentDiv {
-
-width: 100%;
-background-color: #fefefe;
-border-left: 1px solid #000000;
-/*margin-right: 10px;*/
-overflow: auto;
-
-line-height: 20px;
-font-size: 12pt;
-
+.productImage {
+    height: 200px;
+    width: 200px;
+    background-color: #6dbacf;
 }
 
+.productNameDiv {
+    height: 110px;
+    vertical-align: top;
+}
+
+/* Twitter content */
+/* Scrollable twitter content pannel */
+#popupTwitterContentDiv {
+    width: 100%;
+    background-color: #fefefe;
+    border-left: 1px solid #000000;
+    overflow: auto;
+    line-height: 20px;
+    font-size: 12pt;
+}
+
+/* Inner twitter content tables (one for each tweet) displayed within scrollable twitter content pannel */
+.tweetTable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    background-color: #ffffff; 
+    margin-top: 15px;
+}
+
+.tweetTable tr {
+    line-height: 20px;
+}
+
+.tweetTable input {
+    position: relative;
+    top: -4px;
+    border: 0px;
+    padding-left: 4px;
+    width: 20px;
+    color: #888888;
+    font-size: 14pt;   
+}  
+
+.tweetRow1LeftTd {
+    width:1px !important;
+    text-align: left;
+    white-space: nowrap;
+    padding: 10px 0px 0px 40px !important;
+}
+
+.tweetRow1MiddleTd {
+    width:1px !important;
+    text-align: left;
+    vertical-align: top;
+    padding: 10px 0px 0px 5px !important;
+}
+
+.tweetRow1RightTd {
+    width:100% !important;
+    text-align: right;
+    padding-right: 10px !important;
+}
+
+.tweetRow2Td {
+    padding: 8px 4px 0px 8px !important;
+    color: #000000;
+}
+
+.tweetRow3Td {
+    padding: 0px 0px 0px 8px !important;
+    color: #777777;
+    font-size: 14px;
+}
+
+.tweetRow4Td {
+    padding: 5px 0px 10px 8px !important;
+    white-space: nowrap;
+}
+
+.tweetNameSpan {
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tweetScreennameLink {
+    color: #777777;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.tweetScreennameLink:hover {
+    color: #3399ff;
+}
+
+.blueACircle {
+    width: 10px;
+    cursor: help;
+}
+
+.tweetFollowButton {
+    width: 65px;
+    border: 1px solid #3399ff;
+    border-radius: 14px;  
+    padding: 6px 9px 6px 9px;
+    font-size: 10pt;
+    font-weight: 900;
+    color: #3399ff;
+    background-color: #ffffff;
+    margin: 0px 1px 0px 1px;
+    cursor: pointer;
+}
+
+.tweetFollowButton:hover {
+    border: 1px solid #333333;
+    color: #333333;
+}
+
+.tweetFollowButton img {
+    width: 15px;
+    position: relative;
+    top: 2px;
+    margin-right: 4px;
+}
+
+.repliesLikesDiv {
+    display: block;
+}
+
+.repliesLikesDiv img {
+    height: 20px;
+}
+
+/* Control pannel objects when popup is displayed */
 .popupControlDiv {
     border-top: 1px solid #000000;
     text-align: center;
     line-height: 20px;    
     font-size: 10pt;
-}    
+} 
 
-.productImage {
-height: 200px;
-width:200px;
-background-color:#6DBACF;
-}
-
-.productNameDiv {
-height: 110px;
-vertical-align:top;
-}
-
-
-
-
-
-.twitterTable {
-    font-size: 10pt;
+.popupControlTable {
     margin-left: auto;
     margin-right: auto;
-    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 4px;
+    margin-bottom: 4px;   
 }
 
-.twitterTable tr {
-    line-height: 20px;
-
+#tweetNumberLabel {
+    color: #3399ff;
+    font-weight: bold;
 }
 
-.twitterTable td {
-    border: 1px solid #aaaaaa;
-    vertical-align: top;
-    padding-left: 3px;
+.regularTr {
+    line-height: 20px !important;
 }
 
-.twitterScreenName {
-    width: 155px;
-    height: 1px;
-    visibility: hidden;
-    margin: 0px;    
+.sortLabelTdLeft {
+    width: 33% !important; 
+    padding: 5px !important;
+    text-align: left;
 }
 
-.twitterTweetText {
-    width: 370px;
-    height: 1px;
-    visibility: hidden;
-    margin: 0px;        
-}
-
-
-
-.twitterTweetDate {
-    width: 110px;
-    height: 1px;
-    visibility: hidden;
-    margin: 0px;
-}
-
-.tweetHeader {
+.sortLabelTdMiddle {
+    width: 33% !important; 
+    padding: 5px !important;
     text-align: center;
-    font-weight: bold;
-    font-size: 12px;
-    background-color: #eeeeee;
-    border-top: 0px;
-    padding: 0px;
 }
 
-
-.tweetTable {
-margin-left:auto;margin-right:auto;width:500px;border:1px solid #999999;border-radius: 4px;
-background-color:#ffffff; margin-top: 5px;
-
-
+.sortLabelTdRight {
+    width: 33% !important; 
+    padding: 5px !important;
+    text-align: right;
 }
 
-.tweetTable tr {
-line-height: 20px;
-
+#sortChoice {
+    width: 150px;
+    margin: 7px 1px 7px 1px;
+    cursor: grab;
 }
 
-.tweetTable img {
-height: 15px;
-}
-
-.littleLogo {
-width: 40px;
-}
-
-.tweetFollowButton {
-    width: 65px;
-    border: 1px solid #55acee;
-    border-radius: 8px;  
-    padding: 2px 0px 2px 0px;
-    font-size: 8pt;
-    font-weight: bold;
-    color: #55acee;
-    margin: 0px 1px 0px 1px;
-    cursor: help;
-}
-
-
-/* BEGINNING OF IE SPECIFIC RANGE (SLIDER) CSS */
+/* CSS Beginning of IE specific range (slider) CSS within popup control pannel */
 input[type=range]::-ms-track {
     height: 5px;    
     /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
@@ -260,7 +316,7 @@ input[type=range]::-ms-track {
 }
 
 input[type=range]::-ms-fill-lower {
-    background: #777;
+    background: #888888;
     border-radius: 10px;
 }
 
@@ -268,9 +324,6 @@ input[type=range]::-ms-fill-upper {
     background: #aaaaaa;
     border-radius: 10px;
 }
-
-
-
 
 input[type=range]::-ms-thumb {
     border: 1px solid #999999;
@@ -285,7 +338,6 @@ input[type=range]:hover::-ms-thumb {
 }
 
 ::-ms-tooltip { display: none; }
-
 
 input[type=range]::-moz-range-track {
   background: #888888;
@@ -305,27 +357,25 @@ input[type=range]::-webkit-slider-thumb {
 
 /* END OF IE SPECIFIC RANGE (SLIDER) CSS */
 
-#sortChoice {
-/*    background: #555555;*/
-    width: 150px;
-    margin: 7px 1px 7px 1px;
-    cursor: pointer;
+.annoucementDiv {
+    position: absolute;
+    top: 150px;
+    width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.annoucementInnerDiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 150px;
+    border: 2px solid #000000;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 18px;
+}
 
 .fillerDiv {
     display: none;
 }
     
-

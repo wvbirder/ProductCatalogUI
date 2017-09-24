@@ -12,23 +12,15 @@
     </head>
     <body>
         <div id="title">
-        <!--
-            <table style="width: 500x">
-            <td style="width:100%;white-space: nowrap;">
-            <div class="logoDiv">
-                <img src="Images/alphalogo.png" />
-            </div>
-            <h1>Alpha Office Supply</h1>
-            </td>
-            </table>
-        -->
             <h1>Alpha Office Supply</h1>
         </div>
         
-            <div id="myProducts">
+        <div id="productDiv">
        
-            </div>
+        </div>
             
+        <!-- IMPORTANT: Do not alter the table below in any way (including the "style" property).  This table is used as a popup and as a "template" 
+        for all the product pannels.  Using it for both insures the animation is correct.  All the syntax must stay as is-->     
         <table id="popupTable" class="popupTable" style="position: absolute;visibility:hidden;">
             <tr>
                 <td></td>
@@ -38,7 +30,7 @@
             </tr>
             <tr>
                 <td><img src="Images/spacer.png" class="popupProductC1R2Spacer" /></td>
-                <td><div id="popupProductContentDiv" class="productContentTd">~</div></td>
+                <td><div id="popupProductContentDiv" class="productContentDiv">~</div></td>
                 <td></td>                
                 <td id="popupTwitterContentTd" rowspan="2"></td>
             </tr>
@@ -54,60 +46,66 @@
                 <td></td>
             </tr>            
         </table>
+        <!-- IMPORTANT: Do not alter the table above.  See above.-->
         
+        <!-- All divs below hold html code that is extracted and dynamically written by javascript -->
         <div id="popupControlTdFillerDiv" class="fillerDiv">
             <div class="popupControlDiv">
-            <label id="tweetNumberLabel"></label><br />
-
-            <table style="margin-left:auto;margin-right:auto;width:100%;background-color:#ffffff;margin-top:4px;margin-bottom:4px;">
-            <tr style="line-height: 20px;"><td colspan="3" >           
-Sort By
-            </td></tr>
-
-            
-            
-            <tr style="line-height: 20px;"><td style="text-align:left;padding:3px;">Name</td><td style="text-align:center;padding:3px;">Text</td><td style="text-align:right;padding:3px;">Date</td></tr>
-            
-            <tr><td colspan="3">
-            
-                <input id="sortChoice" type="range" min="1" max="3" step="1" value="1" onmousemove="buildTwitterHTML(this.value)"/>  
-            </td></tr>
-            
-            
-            
-            
-            </table>
-            
-                <button onclick="hidePopup()">Close</button>
-        
+                <label id="tweetNumberLabel"></label><br />
+                <table class="popupControlTable">
+                    <tr class="regularTr">
+                        <td colspan="3" >Sort By</td>
+                    </tr>            
+                    <tr class="regularTr">
+                        <td class="sortLabelTdLeft">Name</td>
+                        <td class="sortLabelTdMiddle">Text</td>
+                        <td class="sortLabelTdRight">Date</td>
+                    </tr>            
+                    <tr>
+                        <td colspan="3"><input id="sortChoice" type="range" min="1" max="3" step="1" value="1" onmousemove="buildTwitterHTML(this.value)"/></td>
+                    </tr>           
+                </table>
+                <button onclick="hidePopup()">Close</button>        
             </div>
         </div>
         
-        <div id="tweetTableFillerDiv" class="fillerDiv">        
-        
+        <div id="tweetTableFillerDiv" class="fillerDiv">               
             <table class="tweetTable">
                 <tr>               
-                    <td style="width:1px;text-align:left;white-space: nowrap;padding: 0px 0px 0px 15px;">
-                    <span style="color:#000000;font-size:16px;font-weight:bold;">~NAME~</span><br /><span style="color:#777777;font-size:14px;">@~SCREENNAME~</span></td>
-                    <td style="width:1px;text-align:left;vertical-align:top;padding: 3px 0px 0px 5px;"><img src="Images/alphalogo.png" class="littleLogo"/></td> 
-                    <td style="width:100%;text-align:right"><a class="tweetFollowButton"><img src="Images/twitterBlue.png" style="width:30px;height:30px"/>Follow</a></td>               
+                    <td class="tweetRow1LeftTd">
+                    <span class="tweetNameSpan">~NAME~</span><br /><span class="tweetScreennameSpan">~SCREENNAME~</span></td>
+                    <td class="tweetRow1MiddleTd"><img src="Images/blueACircle.png" class="blueACircle" title="Part of the AlphaOffice Big Data Initiative"/></td> 
+                    <td class="tweetRow1RightTd">                        
+                        <label onclick="window.open('https://twitter.com/~FOLLOWSCREENNAME~', '_blank');" class="tweetFollowButton" title="Follow">
+                            <img src="Images/twitterBlue.png" />Follow
+                        </label>                        
+                    </td>               
                 </tr>
                 <tr>
-                    <td colspan="3" style="padding: 8px 4px 0px 4px;color:#000000;">~TEXT~</td>                
+                    <td colspan="3" class="tweetRow2Td">~TEXT~</td>                
                 </tr>
                 <tr>
-                    <td colspan="3" style="padding: 0px 0px 0px 4px;color:#777777;font-size:14px;">~DATE~</td>                
+                    <td colspan="3" class="tweetRow3Td">~DATE~</td>                
                 </tr>
                 <tr>
-                    <td colspan="2" style="padding: 5px 0px 0px 5px;">
-                        <img src="Images/twitterReply.png" />3
-                        <img src="Images/twitterRetweet.png" />                    
-                        <img src="Images/twitterLike.png" />1                    
+                    <td colspan="3" class="tweetRow4Td">
+                    <div class="repliesLikesDiv">
+                        <img src="Images/twitterReply.png" title="Reply" />~REPLIES~
+                        <img src="Images/twitterRetweet.png" title="Retweet" />~RETWEETS~                   
+                        <img src="Images/twitterLike.png" title="Like" />~LIKES~
+                    </div>                       
                     </td>                
                 </tr>
             </table>
-
         </div>        
-                  
+        
+        <div id="noMySQLRESTURLFillerDiv" class="fillerDiv">
+            <div class="annoucementDiv">
+                <div class="annoucementInnerDiv">
+                    You have not yet replaced the URL for the MySQL database REST service with the appropriate one for your deployment environment.
+                </div>
+            </div>
+        </div>        
+                          
     </body>
 </html>
