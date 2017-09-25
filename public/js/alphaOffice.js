@@ -4,10 +4,10 @@
 CHANGE THE URLS BELOW FOR THE WORKSHOP - THESE URLS MUST POINT TO THE MICROSERVICES.      
 *********************************************************/ 
 // URL for the MySQL database REST service
-var dbServiceURL = "https://AlphaOfficeMySQLREST-gse00010713.apaas.em3.oraclecloud.com/products";
+var dbServiceURL = "https://notactivated";
 
 // URL for the Twitter REST service
-var tweetServiceBaseURL = "https://javatwittermicroservice-gse00010713.apaas.em3.oraclecloud.com/statictweets";
+var tweetServiceBaseURL = "https://notactivated";
 /*********************************************************    
 CHANGE THE URLS ABOVE FOR THE WORKSHOP.    
 *********************************************************/ 
