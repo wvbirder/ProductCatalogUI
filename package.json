@@ -7,6 +7,9 @@
     "scripts": {
         "prepublish": "zip -r target/msdbw-microserviceui.zip doc_root manifest.json *.js"
     },
+    "dependencies": {
+        "express": "^4.13.4"
+    },
     "engines": {
         "node": ">=0.12.0"
     }

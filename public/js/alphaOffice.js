@@ -320,8 +320,8 @@ function getTwitter(harshtagParm) {
                      tweetTimestamp: dateSortString, tweetDate: dateString, id_str: details.id_str, tweetHTML: tweetTableTemplateVar};  
                 // Replace placeholders in the tweetHTML string with specific values for the Tweet record.                        
                 twitterArray[indexVar].tweetHTML =  twitterArray[indexVar].tweetHTML.replace("~NAME~", twitterArray[indexVar].name);  
-                twitterArray[indexVar].tweetHTML =  twitterArray[indexVar].tweetHTML.replace("~SCREENNAME~", "<a href=\"https://twitter.com/" + 
-                    twitterArray[indexVar].screenName + "\" class=\"tweetScreennameLink\" target=\"_blank\" >@" + twitterArray[indexVar].screenName + "</>");                    
+                twitterArray[indexVar].tweetHTML =  twitterArray[indexVar].tweetHTML.replace("~SCREENNAME~", "<a href=\"https://twitter.com/" +
+                    twitterArray[indexVar].screenName + "\" class=\"tweetScreennameLink\" target=\"_blank\" >@" + twitterArray[indexVar].screenName + "</a>");
                 twitterArray[indexVar].tweetHTML =  twitterArray[indexVar].tweetHTML.replace("~FOLLOWSCREENNAME~", twitterArray[indexVar].screenName);                   
                 twitterArray[indexVar].tweetHTML =  twitterArray[indexVar].tweetHTML.replace("~TEXT~", twitterArray[indexVar].tweetText);     
                 twitterArray[indexVar].tweetHTML =  twitterArray[indexVar].tweetHTML.replace("~DATE~", twitterArray[indexVar].tweetDate);               
@@ -371,13 +371,13 @@ function formatTweetText(stringParm) {
         var linkString = "";
         var textString = "";
     }    
-    tweetVar = tweetVar.replace(/’/g, "'");
-    tweetVar = tweetVar.replace(/€H1/g, '');    
-    tweetVar = tweetVar.replace(/€H2/g, ''); 
-    tweetVar = tweetVar.replace(/€H3/g, '');     
-    tweetVar = tweetVar.replace(/€S1/g, '');     
-    tweetVar = tweetVar.replace(/€S2/g, '');        
-    tweetVar = tweetVar.replace(/€S3/g, '');    
+    tweetVar = tweetVar.replace(/ï¿½/g, "'");
+    tweetVar = tweetVar.replace(/ï¿½H1/g, '');    
+    tweetVar = tweetVar.replace(/ï¿½H2/g, ''); 
+    tweetVar = tweetVar.replace(/ï¿½H3/g, '');     
+    tweetVar = tweetVar.replace(/ï¿½S1/g, '');     
+    tweetVar = tweetVar.replace(/ï¿½S2/g, '');        
+    tweetVar = tweetVar.replace(/ï¿½S3/g, '');    
     tweetVar = tweetVar.replace(/#/g, '^^#');
     tweetVar = tweetVar.replace(/@/g, '^^@');
     tweetVar = tweetVar.replace(/http:\/\//g, '^^http://');
