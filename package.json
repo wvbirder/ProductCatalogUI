@@ -1,7 +1,7 @@
 {
     "name": "MSDBW-UI",
     "version": "0.0.0",
-    "description": "html UI for the Cloud Native Microservice-DB Workshop",
+    "description": "HTML UI for the Cloud Native Microservice-DB Workshop",
     "main": "server.js",
     "author": "john.hennen@oracle.com",
     "scripts": {
