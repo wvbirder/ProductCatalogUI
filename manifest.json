@@ -3,5 +3,5 @@
     "runtime": {
         "majorVersion": "0.12"
     },
-    "command": "node http-server -p process.env.PORT --cors"
+    "command": "node server.js"
 }
