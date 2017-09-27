@@ -8,6 +8,7 @@ var dbServiceURL = "https://notactivated";
 
 // URL for the Twitter REST service
 var tweetServiceBaseURL = "https://notactivated";
+
 /*********************************************************    
 CHANGE THE URLS ABOVE FOR THE WORKSHOP.    
 *********************************************************/ 
@@ -56,7 +57,11 @@ $(document).ready(function () {
             buildHTML();
         }
         catch(err){
+<<<<<<< HEAD
             console.log("Error retrieving the Product data from the JSON Endpoint.")
+=======
+            console.log("Error retrieving the Product data from the JSON Endpoint.");
+>>>>>>> 34ca295694b51ab9f76630d8ef818f9508c3aa94
         }
     });
 
@@ -64,7 +69,13 @@ $(document).ready(function () {
     // Create a template for the product panels.  There are 4 product panels per row on the main page.  In order have the popup panel used in the animation look identical to the 
     // product panels, the product panel template is extracted from the popup panel.  The template is contained in popupHTLMArray[0] and popupHTLMArray[1].
     // The generic template is created by removing syntax specific to the popup panel.
+<<<<<<< HEAD
     function buildHTML() {    
+=======
+    function buildHTML() { 
+        var i;  
+        var j; 
+>>>>>>> 34ca295694b51ab9f76630d8ef818f9508c3aa94
         tweetTableTemplateVar = document.getElementById("tweetTableFillerDiv").innerHTML; // To be used later for formatting Tweet data in the popup
         popupHTLMArray = document.getElementById("popupTable").innerHTML.split("~");
         popupHTLMArray[0] = popupHTLMArray[0].replace(" id=\"popupProductC4R1Spacer\"", "");
@@ -78,7 +89,11 @@ $(document).ready(function () {
         $.each(holder.Products, function(index, details) { 
             productArray[details.PRODUCT_ID] = {parent_category_id: details.PARENT_CATEGORY_ID, category_id: details.CATEGORY_ID,
                 product_name: details.PRODUCT_NAME, product_status: details.PRODUCT_STATUS, list_price: details.LIST_PRICE,
+<<<<<<< HEAD
                 warranty_period_months: details.WARRANTY_PERIOD_MONTHS, external_url: details.EXTERNAL_URL, hashtag: details.TWITTER_TAG}                                                                              
+=======
+                warranty_period_months: details.WARRANTY_PERIOD_MONTHS, external_url: details.EXTERNAL_URL, hashtag: details.TWITTER_TAG};                                                                              
+>>>>>>> 34ca295694b51ab9f76630d8ef818f9508c3aa94
             productIndexArray[indexVar] = details.PRODUCT_ID;             
             indexVar = indexVar + 1;                   
         });
@@ -167,9 +182,16 @@ var incrementFactorArray = new Array();
 var incrementFactorSumVar = 2;
 incrementFactorArray[0] = 2
 // Calculate curved path for popup animation (done once on initial load).
+<<<<<<< HEAD
 for (i = 1; i < transitionPositionStepsVar; i++) {
     incrementFactorArray[i] = Math.pow(incrementFactorArray[(i - 1)], transitionCurveVar);
     incrementFactorSumVar = incrementFactorSumVar + incrementFactorArray[i];
+=======
+var z;
+for (z = 1; z < transitionPositionStepsVar; z++) {
+    incrementFactorArray[z] = Math.pow(incrementFactorArray[(z - 1)], transitionCurveVar);
+    incrementFactorSumVar = incrementFactorSumVar + incrementFactorArray[z];
+>>>>>>> 34ca295694b51ab9f76630d8ef818f9508c3aa94
 }
 var transitionIndexVar;
 var currentTopVar;
@@ -340,6 +362,7 @@ function getTwitter(harshtagParm) {
 
 // Create the Tweet table HTML based on the tweetHTML strings.  Sort this array and then create the final Tweet table HTML.
 function buildTwitterHTML(sortParm) {
+<<<<<<< HEAD
         var sortHiddenStringVar;        
         var tweetSortArray = new Array();  
         var tweetString = "";          
@@ -357,10 +380,34 @@ function buildTwitterHTML(sortParm) {
         document.getElementById("popupTwitterContentDiv").innerHTML = tweetString;        
         document.getElementById("popupTwitterContentDiv").scrollTo(0, 0);                
         document.getElementById("tweetNumberLabel").innerHTML = indexVar + " Tweets Total";
+=======
+    var i;   
+    var sortHiddenStringVar;        
+    var tweetSortArray = new Array();  
+    var tweetString = "";          
+    for (i = 0; i < twitterArray.length; i++) {  
+        if (sortParm == 1) {sortHiddenStringVar = twitterArray[i].screenName.toUpperCase();}
+        if (sortParm == 2) {sortHiddenStringVar = twitterArray[i].tweetText.toUpperCase();}
+        if (sortParm == 3) {sortHiddenStringVar = twitterArray[i].tweetTimestamp;}           
+        tweetSortArray[i] = sortHiddenStringVar + "^*^" +  twitterArray[i].tweetHTML;
+    }
+    tweetSortArray.sort(); 
+    for (i = 0; i < twitterArray.length; i++) {                          
+        tweetString = tweetString + tweetSortArray[i].substr(tweetSortArray[i].indexOf('^*^') + 3);  
+    }
+    tweetString = tweetString + "<br /><br />";        
+    document.getElementById("popupTwitterContentDiv").innerHTML = tweetString;        
+    document.getElementById("popupTwitterContentDiv").scrollTo(0, 0);                
+    document.getElementById("tweetNumberLabel").innerHTML = indexVar + " Tweets Total";
+>>>>>>> 34ca295694b51ab9f76630d8ef818f9508c3aa94
 }
 
 // Format the raw tweet text.
 function formatTweetText(stringParm) { 
+<<<<<<< HEAD
+=======
+    var j;
+>>>>>>> 34ca295694b51ab9f76630d8ef818f9508c3aa94
     var tweetVar = "  " + stringParm + "  "; 
     var locationVar;
     var linkTextVar = "";
@@ -371,6 +418,7 @@ function formatTweetText(stringParm) {
         var linkString = "";
         var textString = "";
     }    
+<<<<<<< HEAD
     tweetVar = tweetVar.replace(/�/g, "'");
     tweetVar = tweetVar.replace(/�H1/g, '');    
     tweetVar = tweetVar.replace(/�H2/g, ''); 
@@ -378,6 +426,15 @@ function formatTweetText(stringParm) {
     tweetVar = tweetVar.replace(/�S1/g, '');     
     tweetVar = tweetVar.replace(/�S2/g, '');        
     tweetVar = tweetVar.replace(/�S3/g, '');    
+=======
+    tweetVar = tweetVar.replace(/ï¿½/g, "'");
+    tweetVar = tweetVar.replace(/ï¿½H1/g, '');    
+    tweetVar = tweetVar.replace(/ï¿½H2/g, ''); 
+    tweetVar = tweetVar.replace(/ï¿½H3/g, '');     
+    tweetVar = tweetVar.replace(/ï¿½S1/g, '');     
+    tweetVar = tweetVar.replace(/ï¿½S2/g, '');        
+    tweetVar = tweetVar.replace(/ï¿½S3/g, '');    
+>>>>>>> 34ca295694b51ab9f76630d8ef818f9508c3aa94
     tweetVar = tweetVar.replace(/#/g, '^^#');
     tweetVar = tweetVar.replace(/@/g, '^^@');
     tweetVar = tweetVar.replace(/http:\/\//g, '^^http://');
@@ -444,4 +501,7 @@ function getBrowser(){
         return M[0];
     }    
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 34ca295694b51ab9f76630d8ef818f9508c3aa94
