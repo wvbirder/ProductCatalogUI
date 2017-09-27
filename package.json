@@ -1,11 +1,11 @@
 {
     "name": "MSDBW-UI",
     "version": "0.0.0",
-    "description": "html UI for the Cloud Native Microservice-DB Workshop",
+    "description": "HTML UI for the Cloud Native Microservice-DB Workshop",
     "main": "server.js",
     "author": "john.hennen@oracle.com",
     "scripts": {
-        "prepublish": "zip -r target/msdbw-microserviceui.zip doc_root manifest.json *.js"
+        "prepublish": "zip -r target/msdbw-microserviceui.zip node_modules public manifest.json *.js"
     },
     "dependencies": {
         "express": "^4.13.4"
