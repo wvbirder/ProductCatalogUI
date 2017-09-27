@@ -1,14 +1,16 @@
 {
-  "name": "AlphaOfficeProductCatalogUI",
-  "version": "0.0.1",
-  "dependencies": {
-    "http-server": ???"
-  },
-   "scripts": {
-        "prepublish": "zip -r target/productCatalog.zip manifest.json js alpha.html css images node_modules"
+    "name": "MSDBW-UI",
+    "version": "0.0.0",
+    "description": "html UI for the Cloud Native Microservice-DB Workshop",
+    "main": "server.js",
+    "author": "john.hennen@oracle.com",
+    "scripts": {
+        "prepublish": "zip -r target/msdbw-microserviceui.zip doc_root manifest.json *.js"
     },
-  "main": "????? alpha.js",
-  "engines": {
-    "node": ">=6"
-  }
+    "dependencies": {
+        "express": "^4.13.4"
+    },
+    "engines": {
+        "node": ">=0.12.0"
+    }
 }
