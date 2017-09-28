@@ -1,8 +1,8 @@
 /* Javascript .js file for the alpha.html page */
 
-/*********************************************************    
+/*********************************************************
 CHANGE THE URLS BELOW FOR THE WORKSHOP - THESE URLS MUST POINT TO THE MICROSERVICES.      
-*********************************************************/ 
+*********************************************************/
 
 // URL for the MySQL database REST service
 var dbServiceURL = "https://notactivated";
@@ -10,9 +10,9 @@ var dbServiceURL = "https://notactivated";
 // URL for the Twitter REST service
 var tweetServiceBaseURL = "https://notactivated";
 
-/*********************************************************    
+/*********************************************************
 CHANGE THE URLS ABOVE FOR THE WORKSHOP.    
-*********************************************************/ 
+*********************************************************/
 
 // Set position and size variables.
 var popupTopVar = 20;
@@ -21,7 +21,7 @@ var popupTwitterContentHeightVar = 490;
 // Set constants used in animation.
 var transitionCurveVar = 1.05;
 var transitionPositionStepsVar = 30;
-var transitionSizeStepsVar = 10;;
+var transitionSizeStepsVar = 10;
 var widthIncrementVar = 30;
 var heightIncrementVar = 30;
 
