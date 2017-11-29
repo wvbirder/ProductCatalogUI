@@ -12,4 +12,4 @@ push:
         ports: 8085
         repository: $DOCKER_REPOSITORY
         registry: https://index.docker.io/v2/
-    #    cmd: node pipeline/source/server.js
+        cmd: node pipeline/source/server.js
