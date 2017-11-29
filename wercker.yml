@@ -11,5 +11,5 @@ push:
         tag: $DOCKER_TAG
         ports: 8085
         repository: $DOCKER_REPOSITORY
-        registry: https://index.docker.io/v2
+        registry: https://index.docker.io/v2/
         cmd: node pipeline/source/server.js
