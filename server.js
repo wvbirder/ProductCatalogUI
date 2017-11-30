@@ -6,7 +6,7 @@ var path = require('path');
 var PORT = process.env.PORT || 8085;
 var app = express();
 
-app.use(express.static('/pipeline/source/public'));
+app.use(express.static('./public'));
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/public/alpha.html'));
