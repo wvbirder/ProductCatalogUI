@@ -9,7 +9,7 @@ var app = express();
 app.use(express.static('/pipeline/source/public'));
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/pipeline/source/public/alpha.html'));
+    res.sendFile(path.join(__dirname + '/public/alpha.html'));
 });
 
 app.listen(PORT, function () {
