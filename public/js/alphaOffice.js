@@ -8,7 +8,7 @@ CHANGE THE URLS BELOW FOR THE WORKSHOP - THESE URLS MUST POINT TO THE MICROSERVI
 var dbServiceURL = "http://140.86.40.237:8002/products";
 
 // URL for the Twitter REST service
-var tweetServiceBaseURL = "https://notactivated";
+var tweetServiceBaseURL = "http://140.86.40.237:9080/statictweets";
 
 /*********************************************************
 CHANGE THE URLS ABOVE FOR THE WORKSHOP.    
