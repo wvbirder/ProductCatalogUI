@@ -69,6 +69,7 @@ $(document).ready(function () {
     function buildHTML() { 
         var i;  
         var j; 
+        console.log('Request came into container: ' + process.env.OCCS_CONTAINER_NAME);
         tweetTableTemplateVar = document.getElementById("tweetTableFillerDiv").innerHTML; // To be used later for formatting Tweet data in the popup
         popupHTLMArray = document.getElementById("popupTable").innerHTML.split("~");
         popupHTLMArray[0] = popupHTLMArray[0].replace(" id=\"popupProductC4R1Spacer\"", "");
