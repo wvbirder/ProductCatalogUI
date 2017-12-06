@@ -44,7 +44,6 @@ var twitterDataLoadedVar;
 var transitionCompletedVar;
 var hashtagVar;
 var tweetTableTemplateVar;
-var OCCS_CONTAINER_NAME = process.env.OCCS_CONTAINER_NAME; //Added to track container requests - MTO 12-6-17
 
 $(document).ready(function () {
     // If the dbServiceURL has not been changed ...
@@ -56,7 +55,6 @@ $(document).ready(function () {
     $.getJSON(dbServiceURL, function (data) {
         try{
             holder =data;
-            console.log('Request came into container: ' + OCCS_CONTAINER_NAME); //Added to track container requests - MTO 12-6-17
             buildHTML();
         }
         catch(err){
