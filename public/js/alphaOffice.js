@@ -54,6 +54,7 @@ $(document).ready(function () {
     // Call REST service Node.js accessing MySQL product data.
     $.getJSON(dbServiceURL, function (data) {
         try{
+            console.log("Request came into container: " + process.env.OCCS_CONTAINER_NAME);
             holder =data;
             buildHTML();
         }
