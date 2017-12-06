@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
     // console.log('Request came into container: ' + process.env.OCCS_CONTAINER_NAME);
     res.sendFile(path.join(__dirname + '/public/alpha.html'));
     if (req.hostname == "140.86.40.237") {
-        console.log(req.hostname);
+        console.log("A request came into " + process.env.OCCS_CONTAINER_NAME + " from " + req.hostname);
     }
 });
 
