@@ -68,8 +68,7 @@ $(document).ready(function () {
     // The generic template is created by removing syntax specific to the popup panel.
     function buildHTML() { 
         var i;  
-        var j; 
-        console.log("Request came into container: " + process.env.OCCS_CONTAINER_NAME);
+        var j;
         tweetTableTemplateVar = document.getElementById("tweetTableFillerDiv").innerHTML; // To be used later for formatting Tweet data in the popup
         popupHTLMArray = document.getElementById("popupTable").innerHTML.split("~");
         popupHTLMArray[0] = popupHTLMArray[0].replace(" id=\"popupProductC4R1Spacer\"", "");
