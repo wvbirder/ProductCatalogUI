@@ -13,6 +13,5 @@ app.get('/', function (req, res) {
 });
 
 app.listen(PORT, function () {
-    console.log('listening on port ' + PORT);
-    console.log('Runnind on: ' + process.env.OCCS_CONTAINER_NAME);
+    console.log('listening on port ' + PORT)
 });
