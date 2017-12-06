@@ -9,8 +9,9 @@ var app = express();
 app.use(express.static('/pipeline/source/public'));
 
 app.get('/', function (req, res) {
-    console.log('Request came into container: ' + process.env.OCCS_CONTAINER_NAME);
+    // console.log('Request came into container: ' + process.env.OCCS_CONTAINER_NAME);
     res.sendFile(path.join(__dirname + '/public/alpha.html'));
+    console.log(res.headersSent);
 });
 
 app.listen(PORT, function () {
