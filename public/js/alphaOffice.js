@@ -55,7 +55,6 @@ $(document).ready(function () {
     $.getJSON(dbServiceURL, function (data) {
         try{
             holder =data;
-            console.log(process.env);
             buildHTML();
         }
         catch(err){
